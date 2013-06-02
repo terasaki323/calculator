@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="plugins/plugin-loader.js"></script>
+        <link rel="stylesheet" href="plugins/plugin-loader.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script language="JavaScript" src="js/calculation.js"></script>   
+        <title>電卓</title>
+        <script>
+            // Set virtual screen width size to 640 pixels (横幅640pxに設定)
+            monaca.viewport({width: 640});
+        </script>
+    </head>
+    <body>
+        <form name="form1" action="" method="">
+        <dl>
+        <dt>
+            <input type="text" name="disp" class="disp" value="0" readonly>   
+        </dt>
+        <dt class="frame">
+          <dd><input type="button" class="tenkeylight" value="BS" onTouchEnd="execButtonBs()"></dd>
+          <dd><input type="button" class="tenkey" value="C" onTouchEnd="execButtonC()"></dd>
+          <dd><input type="button" class="tenkeylight" value="%" onTouchEnd="execButtonPercent()"></dd>
+          <dd><input type="button" class="tenkey" value="÷" onTouchEnd="execButtonDivsion()"></dd>
+          
+          <dd><input type="button" class="numberKey" value="7" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKeylight" value="8" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKey" value="9" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="tenkeylight" value="×" onTouchEnd="execButtonMultiply()"></dd>
+          
+          <dd><input type="button" class="numberKeylight" value="4" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKey" value="5" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKeylight" value="6" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="tenkey" value="－" onTouchEnd="execButtonMinus()"></dd>                
+          
+          <dd><input type="button" class="numberKey" value="1" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKeylight" value="2" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKey" value="3" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="tenkeylight" value="＋" onTouchEnd="execButtonPlus(this.value)"></dd>
+          
+          <dd><input type="button" class="numberKeylight" value="0" onTouchEnd="Numberinput(this.value)"></dd>
+          <dd><input type="button" class="numberKey" value="." onTouchEnd="teninput(this.value)"></dd>
+          <dd><input type="button" class="tenkeylight" value="+/-" onTouchEnd="execButtonPlusMinus()"></dd>
+          <dd><input type="button" class="tenkey" value="=" onTouchEnd="execButtonEqual()"></dd>
+        </dt>        
+        </form>
+        </dl>
+    </body>
+</html>
